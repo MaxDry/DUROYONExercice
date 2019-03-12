@@ -24,7 +24,7 @@ class JobController extends AbstractController
             ->findAll();
 
         return $this->render('job/index.html.twig', [
-            'job' => $job,
+            'jobs' => $job,
         ]);
     }
 

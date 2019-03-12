@@ -1,20 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CandidatureController!{% endblock %}
+{% block title %}Job index{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <h1>Job index</h1>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for job in jobs %}
+            <tr>
+                <td>{{ job.nom }}</td>
+                <td>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'E:/wamp64/www/DUROYONExercice/src/Controller/CandidatureController.php'|file_link(0) }}">src/Controller/CandidatureController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'E:/wamp64/www/DUROYONExercice/templates/candidature/index.html.twig'|file_link(0) }}">templates/candidature/index.html.twig</a></code></li>
-    </ul>
-</div>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('job_new') }}">Créer un job</a>
 {% endblock %}

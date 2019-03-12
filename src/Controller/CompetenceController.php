@@ -25,7 +25,7 @@ class CompetenceController extends AbstractController
             ->findAll();
 
         return $this->render('competence/index.html.twig', [
-            'competence' => $competence,
+            'competences' => $competence,
         ]);
     }
 

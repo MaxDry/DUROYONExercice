@@ -25,7 +25,7 @@ class OffreController extends AbstractController
             ->findAll();
 
         return $this->render('offre/index.html.twig', [
-            'offre' => $offre,
+            'offres' => $offre,
         ]);
     }
 

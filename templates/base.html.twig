@@ -2,11 +2,37 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Accueil{% endblock %}</title>
+        <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset("styles.css") }}">
+
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="">Accueil</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('candidature_index') }}">Candidature</a>
+                        <a class="nav-link" href="{{ path('offre_index') }}">Offre</a>
+                        <a class="nav-link" href="{{ path('contrat_index') }}">Contrat</a>
+                        <a class="nav-link" href="{{ path('competence_index') }}">Competence</a>
+                        <a class="nav-link" href="{{ path('job_index') }}">Job</a>
+                    </li>      
+                </ul>
+            </div>
+        </nav>
+
+      
+        <div class="container">
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        </div>
     </body>
 </html>

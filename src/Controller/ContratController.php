@@ -24,7 +24,7 @@ class ContratController extends AbstractController
             ->findAll();
 
         return $this->render('contrat/index.html.twig', [
-            'contrat' => $contrat,
+            'contrats' => $contrat,
         ]);
     }
 
