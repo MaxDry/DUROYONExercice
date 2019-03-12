@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Creation d'une offre{% endblock %}
+{% block title %}New offres{% endblock %}
 
 {% block body %}
-    <h1>Creation d'une offre</h1>
+    <h1>Create new offres</h1>
 
-    {{ include('offre/_form.html.twig') }}
+    {{ include('offres/_form.html.twig') }}
 
-    <a href="{{ path('offre_index') }}">back to list</a>
+    <a href="{{ path('offres_index') }}">back to list</a>
 {% endblock %}
