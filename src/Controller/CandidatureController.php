@@ -24,7 +24,7 @@ class CandidatureController extends AbstractController
             ->findAll();
 
         return $this->render('candidature/index.html.twig', [
-            'candidature' => $candidature,
+            'candidatures' => $candidature,
         ]);
     }
 
